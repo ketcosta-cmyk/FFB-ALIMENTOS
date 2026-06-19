@@ -1,0 +1,646 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --marrom: #2F241F;
+    --dourado: #B38B59;
+    --bege: #F7F3EE;
+    --branco: #FFFFFF;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: var(--bege);
+    color: var(--marrom);
+}
+
+.header {
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 25px 80px;
+
+    background: rgba(0, 0, 0, 0.20);
+    backdrop-filter: blur(10px);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  height: 60px;       
+  width: auto;
+  object-fit: contain;
+}
+
+.menu {
+    display: flex;
+    gap: 40px;
+    list-style: none;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: .3s;
+}
+
+.menu a:hover {
+    color: var(--dourado);
+}
+
+.btn-whatsapp {
+    color: white;
+    text-decoration: none;
+
+    border: 1px solid white;
+    padding: 12px 20px;
+    border-radius: 50px;
+
+    transition: .3s;
+}
+
+.btn-whatsapp:hover {
+    background: white;
+    color: var(--marrom);
+}
+
+.hero {
+    height: 100vh;
+
+    background-image:
+        linear-gradient(
+            rgba(0,0,0,.55),
+            rgba(0,0,0,.55)
+        ),
+        url("assets/images/hero.jpg");
+
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    align-items: center;
+
+    padding: 0 100px;
+}
+
+.hero-content {
+    max-width: 700px;
+    color: white;
+}
+
+.subtitle {
+    color: var(--dourado);
+    letter-spacing: 3px;
+    text-transform: uppercase;
+
+    animation: subirTexto 1s ease forwards;
+    animation-delay: .2s;
+    opacity: 0;
+}
+
+.hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 5rem;
+    margin: 20px 0;
+    line-height: 1.1;
+
+    animation: subirTexto 1s ease forwards;
+    animation-delay: .5s;
+    opacity: 0;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    max-width: 600px;
+
+    animation: subirTexto 1s ease forwards;
+    animation-delay: .8s;
+    opacity: 0;
+}
+
+.btn-primary {
+    display: inline-block;
+    margin-top: 30px;
+
+    background: var(--dourado);
+    color: white;
+
+    padding: 16px 30px;
+    border-radius: 8px;
+
+    text-decoration: none;
+    font-weight: 600;
+
+    transition: .3s;
+
+    animation: subirTexto 1s ease forwards;
+    animation-delay: 1.1s;
+    opacity: 0;
+}
+
+.btn-primary:hover {
+    transform: translateY(-3px);
+    background: #a17a4b;
+}
+
+.subtitle,
+.hero h1,
+.hero p,
+.btn-primary {
+    animation-fill-mode: forwards;
+}
+
+@keyframes subirTexto {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.historia {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 80px;
+    align-items: center;
+
+    padding: 140px 100px;
+    background: var(--bege);
+}
+
+.historia-imagem-principal img {
+    width: 100%;
+    height: 650px;
+
+    object-fit: cover;
+    object-position: center;
+
+    border-radius: 40px;
+
+    box-shadow: 0 20px 40px rgba(0,0,0,.08);
+}
+
+.historia-lateral {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.historia-caminhao {
+    width: 100%;
+    height: 300px;
+
+    object-fit: cover;
+
+    border-radius: 28px;
+
+    box-shadow: 0 15px 35px rgba(0,0,0,.08);
+}
+
+.historia-texto span {
+    color: var(--dourado);
+
+    letter-spacing: 4px;
+
+    font-size: .85rem;
+
+    text-transform: uppercase;
+}
+
+.historia-texto h2 {
+    font-family: 'Playfair Display', serif;
+
+    font-size: 3.2rem;
+
+    color: var(--marrom);
+
+    margin: 20px 0 30px;
+}
+
+.historia-texto p {
+    font-size: 1.1rem;
+
+    line-height: 2;
+
+    color: #666;
+}
+
+.historia-numeros {
+    display: flex;
+
+    gap: 50px;
+
+    margin-top: 50px;
+}
+
+.numero h3 {
+    font-family: 'Playfair Display', serif;
+
+    font-size: 2rem;
+
+    color: var(--dourado);
+}
+
+.numero span {
+    color: #666;
+
+    letter-spacing: normal;
+
+    text-transform: none;
+
+    font-size: .95rem;
+}
+
+@media (max-width: 900px) {
+
+    .historia {
+        grid-template-columns: 1fr;
+
+        padding: 90px 25px;
+    }
+
+    .historia-imagem img {
+        height: 400px;
+    }
+
+    .historia-texto h2 {
+        font-size: 2.2rem;
+    }
+
+    .historia-numeros {
+        flex-direction: column;
+        gap: 25px;
+    }
+}
+
+.logistica {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+
+    align-items: center;
+
+    padding: 140px 100px;
+
+    background: #fff;
+}
+
+.logistica-imagem img {
+    width: 100%;
+    height: 600px;
+
+    object-fit: cover;
+
+    border-radius: 40px;
+
+    box-shadow: 0 20px 40px rgba(0,0,0,.08);
+}
+
+.logistica-texto span {
+    color: var(--dourado);
+    letter-spacing: 4px;
+    font-size: .85rem;
+    text-transform: uppercase;
+}
+
+.logistica-texto h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
+
+    margin: 20px 0 30px;
+}
+
+.logistica-texto p {
+    color: #666;
+    font-size: 1.1rem;
+    line-height: 2;
+}
+
+@media (max-width: 900px) {
+    .logistica {
+        grid-template-columns: 1fr;
+        padding: 90px 25px;
+    }
+
+    .logistica-imagem img {
+        height: 400px;
+    }
+
+    .logistica-texto h2 {
+        font-size: 2.2rem;
+    }
+}
+
+.produtos {
+    padding: 140px 100px;
+    background: #fff;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 120px;
+}
+
+.section-title span {
+    color: var(--dourado);
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-size: .9rem;
+}
+
+.section-title h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3.2rem;
+    color: var(--marrom);
+    margin-top: 15px;
+}
+
+.produto {
+    display: grid;
+    grid-template-columns: 1fr 0.9fr;
+    gap: 80px;
+    align-items: center;
+    margin-bottom: 180px;
+}
+
+.produto.reverso {
+    grid-template-columns: 0.9fr 1fr;
+}
+
+.produto-imagens {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    width: 100%;
+}
+
+.produto-imagens.unica {
+    display: block;
+    max-width: 800px;
+}
+
+.produto-imagens img {
+    width: 100%;
+
+    max-height: 530px;
+
+    object-fit: contain;
+
+    background: #fff;
+
+    border-radius: 36px;
+
+    box-shadow: 0 20px 40px rgba(0,0,0,.08);
+
+    transition: .4s ease;
+
+    padding: 8px;
+}
+
+.produto-imagens img:hover {
+    transform: scale(1.03);
+}
+
+.produto-texto span {
+    color: var(--dourado);
+    letter-spacing: 4px;
+    font-size: .85rem;
+    text-transform: uppercase;
+}
+
+.produto-texto h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
+    color: var(--marrom);
+
+    margin: 20px 0 30px 0;
+}
+
+.produto-texto p {
+    color: #666;
+    font-size: 1.15rem;
+    line-height: 1.9;
+    max-width: 520px;
+}
+@media (max-width: 900px) {
+
+    .produtos {
+        padding: 90px 25px;
+    }
+
+    .section-title h2 {
+        font-size: 2rem;
+    }
+
+    .produto,
+    .produto.reverso {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        margin-bottom: 120px;
+    }
+
+    .produto-imagens {
+        grid-template-columns: 1fr;
+    }
+
+    .produto-imagens img {
+        height: 350px;
+        border-radius: 28px;
+    }
+
+    .produto-imagens.unica img {
+        height: 450px;
+    }
+
+    .produto-texto {
+        text-align: center;
+    }
+
+    .produto-texto h3 {
+        font-size: 2.2rem;
+    }
+
+    .produto-texto p {
+        max-width: 100%;
+    }
+.croissant-principal {
+    object-position: 50% 100%;
+}
+.produto-texto {
+    max-width: 450px;
+}
+
+.produto-texto h3 {
+    font-size: 3.5rem;
+}
+
+.produto-texto p {
+    line-height: 2;
+}
+
+}
+.produto-imagem-principal img {
+    width: 100%;
+    height: 600px;
+
+    object-fit: cover;
+
+    border-radius: 38px;
+
+    box-shadow: 0 20px 30px rgba(0,0,0,.08);
+}
+.produto-info-lateral {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 45px;
+}
+.foto-secundaria {
+    width: 100%;
+    height: 340px;
+
+    object-fit: cover;
+
+    border-radius: 35px;
+
+    box-shadow: 0 17px 35px rgba(0,0,0,.08);
+}
+@media (max-width: 900px) {
+
+    .produto-imagem-principal img {
+        height: 400px;
+    }
+
+    .foto-secundaria {
+        height: 180px;
+    }
+}
+
+.footer a {
+    color: #fff;
+    text-decoration: none;
+    transition: .3s;
+}
+
+.footer a:hover {
+    color: var(--dourado);
+}
+
+.footer {
+  background: #1f1a17;
+  color: #fff;
+  padding: 60px 20px 20px;
+  font-family: Arial, sans-serif;
+}
+
+.footer-container {
+  max-width: 1100px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+
+.footer-col h2.logo {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.footer-col h3 {
+  margin-bottom: 15px;
+  color: #f0a24a;
+}
+
+.footer-col p {
+  line-height: 1.6;
+  margin-bottom: 10px;
+  color: #ddd;
+}
+
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-col ul li {
+  margin-bottom: 10px;
+}
+
+.footer-col ul li a {
+  color: #ddd;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.footer-col ul li a:hover {
+  color: #f0a24a;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 40px;
+  border-top: 1px solid #333;
+  padding-top: 15px;
+  font-size: 14px;
+  color: #aaa;
+}
+@media (max-width: 768px) {
+  .footer-container {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+}
+.animar {
+    opacity: 0;
+    transform: translateY(80px) scale(0.95);
+    transition: all 1.3s ease;
+}
+
+.animar.apareceu {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+}
+.fotos-duplas {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.fotos-duplas img {
+    width: 100%;
+    height: 220px;
+
+    object-fit: cover;
+
+    border-radius: 28px;
+
+    box-shadow: 0 15px 35px rgba(0,0,0,.08);
+
+    transition: .3s;
+}
+
+.fotos-duplas img:hover {
+    transform: scale(1.03);
+}
