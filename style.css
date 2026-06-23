@@ -646,81 +646,106 @@ body {
 }
 @media (max-width: 768px) {
 
-    .navbar {
-        padding: 15px 20px !important;
-        gap: 10px;
+    html,
+    body {
+        overflow-x: hidden;
     }
 
-    .logo img {
-        height: 45px !important;
+    .header {
+        width: 100%;
+    }
+
+    .navbar {
+        padding: 15px !important;
+        justify-content: space-between;
     }
 
     .menu {
-       display: none !important;
+        display: none !important;
     }
 
-    .menu a {
-        font-size: 0.9rem;
+    .logo img {
+        height: 42px !important;
     }
 
     .btn-whatsapp {
-        padding: 10px 15px !important;
-        font-size: 0.85rem !important;
+        font-size: 0.75rem !important;
+        padding: 8px 12px !important;
     }
 
     .hero {
-       text-align: center;
-        padding: 120px 25px 60px !important;
+        min-height: 100vh;
+        padding: 100px 20px 50px !important;
+        justify-content: center;
+        text-align: center;
     }
 
     .hero-content {
-       max-width: 100% !important;
-    }
-
-    .hero h1 {
-        font-size: 2.1rem !important;
-        line-height: 1.15 !important;
-        margin: 15px 0 !important;
-    }
-
-    .hero p {
-        font-size: 1rem !important;
-        line-height: 1.7 !important;
+        width: 100%;
         max-width: 100% !important;
     }
 
+    .subtitle {
+        font-size: 0.8rem;
+    }
+
+    .hero h1 {
+        font-size: 2rem !important;
+        line-height: 1.15 !important;
+        margin: 20px 0 !important;
+    }
+
+    .hero p {
+        font-size: 0.95rem !important;
+        line-height: 1.7 !important;
+    }
+
     .btn-primary {
-        width: auto;
-        display: inline-block !important;
+        width: 100%;
+        max-width: 280px;
+        margin: 25px auto 0;
+        display: block;
     }
 
     .historia,
     .logistica,
     .produto,
     .produto.reverso {
-        grid-template-columns: 1fr;
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 30px;
     }
 
     .historia-imagem-principal img,
     .produto-imagem-principal img {
-        height: 350px;
+        height: 280px !important;
     }
 
-    .produto-texto {
-        max-width: 100%;
+    .foto-secundaria {
+        height: 180px !important;
+    }
+
+    .fotos-duplas {
+        grid-template-columns: 1fr !important;
+    }
+
+    .produto-texto,
+    .historia-texto,
+    .logistica-texto {
         text-align: center;
     }
 
     .produto-texto h3 {
-        font-size: 2.5rem;
+        font-size: 2rem !important;
     }
 
-    .historia-texto h2 {
-        font-size: 2.3rem;
+    .historia-texto h2,
+    .logistica-texto h2 {
+        font-size: 2rem !important;
     }
 
     .historia-numeros {
         flex-direction: column;
-        gap: 20px;
+        gap: 15px;
     }
 }
