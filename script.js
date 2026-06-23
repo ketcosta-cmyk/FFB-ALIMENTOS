@@ -17,3 +17,17 @@ function revelarElementos() {
 
 window.addEventListener('scroll', revelarElementos);
 window.addEventListener('load', revelarElementos);
+
+const menuMobile = document.getElementById("menuMobile");
+const menu = document.querySelector(".menu");
+
+menuMobile.addEventListener("click", () => {
+    menu.classList.toggle("ativo");
+});
+document.querySelectorAll(".menu a").forEach(link => {
+
+    link.addEventListener("click", () => {
+        menu.classList.remove("ativo");
+    });
+
+});
