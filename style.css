@@ -760,7 +760,7 @@ body {
 @media (max-width: 768px) {
 
     .menu-mobile {
-        display: block;
+        display: block !important;
     }
 
     .menu {
@@ -771,7 +771,7 @@ body {
         width: 280px;
         height: 100vh;
 
-        background: rgba(47,36,31,.98);
+        background: rgba(245, 83, 8, 0.98);
 
         display: flex;
         flex-direction: column;
