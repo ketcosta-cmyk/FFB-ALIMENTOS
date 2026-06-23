@@ -647,16 +647,16 @@ body {
 @media (max-width: 768px) {
 
     .navbar {
-        padding: 15px 20px;
+        padding: 15px 20px !important;
         gap: 10px;
     }
 
     .logo img {
-        height: 45px;
+        height: 45px !important;
     }
 
     .menu {
-       display: none;
+       display: none !important;
     }
 
     .menu a {
@@ -664,34 +664,34 @@ body {
     }
 
     .btn-whatsapp {
-        padding: 10px 15px;
-        font-size: 0.85rem;
+        padding: 10px 15px !important;
+        font-size: 0.85rem !important;
     }
 
     .hero {
-        min-height: 100vh;
-        padding: 120px 25px 60px;
+       text-align: center;
+        padding: 120px 25px 60px !important;
     }
 
     .hero-content {
-        text-align: center;
+       max-width: 100% !important;
     }
 
     .hero h1 {
-        font-size: 2.5rem;
-        line-height: 1.1;
-        margin: 15px 0;
+        font-size: 2.1rem !important;
+        line-height: 1.15 !important;
+        margin: 15px 0 !important;
     }
 
     .hero p {
-        font-size: 1rem;
-        line-height: 1.8;
-        max-width: 100%;
+        font-size: 1rem !important;
+        line-height: 1.7 !important;
+        max-width: 100% !important;
     }
 
     .btn-primary {
         width: auto;
-        display: inline-block;
+        display: inline-block !important;
     }
 
     .historia,
