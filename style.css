@@ -644,3 +644,81 @@ body {
 .fotos-duplas img:hover {
     transform: scale(1.03);
 }
+@media (max-width: 768px) {
+
+    .navbar {
+        padding: 15px 20px;
+        gap: 10px;
+    }
+
+    .logo img {
+        height: 45px;
+    }
+
+    .menu {
+        gap: 15px;
+    }
+
+    .menu a {
+        font-size: 0.9rem;
+    }
+
+    .btn-whatsapp {
+        padding: 10px 14px;
+        font-size: 0.9rem;
+    }
+
+    .hero {
+        padding: 0 25px;
+        text-align: center;
+    }
+
+    .hero-content {
+        max-width: 100%;
+    }
+
+    .hero h1 {
+        font-size: 3rem;
+        line-height: 1.1;
+    }
+
+    .hero p {
+        font-size: 1rem;
+        line-height: 1.8;
+    }
+
+    .btn-primary {
+        width: 100%;
+        text-align: center;
+    }
+
+    .historia,
+    .logistica,
+    .produto,
+    .produto.reverso {
+        grid-template-columns: 1fr;
+    }
+
+    .historia-imagem-principal img,
+    .produto-imagem-principal img {
+        height: 350px;
+    }
+
+    .produto-texto {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .produto-texto h3 {
+        font-size: 2.5rem;
+    }
+
+    .historia-texto h2 {
+        font-size: 2.3rem;
+    }
+
+    .historia-numeros {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
