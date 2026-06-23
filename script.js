@@ -5,10 +5,10 @@ menuMobile.addEventListener("click", () => {
     menu.classList.toggle("ativo");
 });
 document.querySelectorAll(".menu a").forEach(link => {
-
-    link.addEventListener("click", () => {
-        menu.classList.remove("ativo");
-    });
+menuMobile.addEventListener("click", () => {
+    alert("menu clicado");
+    menu.classList.toggle("ativo");
+});
 
 });
 
